@@ -57,19 +57,19 @@ Each report is contained in a DIV who is a direct child of the wrapper DIV.
 ### Data in the report
 * Date of the incident
 
-  First text element of the report DIV, preceding the location: 22.06.2018 - Bergen
+  First text element of the report `DIV`, preceding the location: 22.06.2018 - Bergen
 * Place of the incident in plain text
 
-  First text element of the report DIV, added after the date.  
-  The neighborhood is given wrapped in a following SPAN and an I  
-  22.06.2018 - Bergen <span class="small"><i>(Vorpommern-Ruegen)</i></span>
+  First text element of the report `DIV`, added after the date.  
+  The neighborhood is given wrapped in a following `SPAN` and an `I`  
+  22.06.2018 - Bergen `<span class="small"><i>(Vorpommern-Ruegen)</i></span>`
 * Description of the incident
 
-  A text element wrapped between 2 closed (!) </p> tags
+  A text element wrapped between 2 closed (!) `</p>` tags
 * Source
 
-  Wrapped in a SPAN inside the last P of the report's DIV  
-  <span class="small">Quelle: Polizei</span>
+  Wrapped in a SPAN inside the last `P` of the report's `DIV`
+  `<span class="small">Quelle: Polizei</span>`
 ### Note
 The reports can be filtered by Landkreis, Motiv, and Delikt.
 This is done with a POST request to https://www.lobbi-mv.de/lobbi-neu/index.php?inhalt=chronik_gewalt
@@ -77,7 +77,7 @@ The parameters are:
 * landkreis
 * motiv
 * delikt
-The possible values can be found from the OPTIONS in the SELECTs with the NAME attributes `landkreis`, `motiv`, `delikt`
+The possible values can be found from the `OPTIONS` in the `SELECT`s with the `NAME` attributes `landkreis`, `motiv`, `delikt`
 
 
 ## Opferperspektive (Brandenburg)
