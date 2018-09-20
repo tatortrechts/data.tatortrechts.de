@@ -21,17 +21,17 @@ Link is in the 2nd column of the table
 
 ### Data in the report
 * Date of the incident
-...Wrapped in a SPAN with class 'date-display-single'
-...UTC representation in in the 'content' attribute of the SPAN
+... Wrapped in a SPAN with class 'date-display-single'
+... UTC representation in in the 'content' attribute of the SPAN
 * Place of the incident in plain text
-...Wrapped in H1
+... Wrapped in H1
 * (Optional) Geocoordinates of the place of the incident
-...In a SCRIPT tag inside HEAD: {"type":"point","lat":52.4661044,"lon":13.434734}]}
+... In a SCRIPT tag inside HEAD: {"type":"point","lat":52.4661044,"lon":13.434734}]}
 * Description of the incident
-...In the first P inside a DIV with class 'field-type-text-with-summary'
+... In the first P inside a DIV with class 'field-type-text-with-summary'
 * (Optional) List of other sources
-...In the second P inside a DIV with class 'field-type-text-with-summary'
-...Each source is separated by a BR, the format is SourceName, date
+... In the second P inside a DIV with class 'field-type-text-with-summary'
+... Each source is separated by a BR, the format is SourceName, date
 
 
 ## LOBBI (Mecklenburg-Vorpommern)
@@ -51,16 +51,16 @@ Each report is contained in a DIV who is a direct child of the wrapper DIV.
 
 ### Data in the report
 * Date of the incident
-...First text element of the report DIV, preceding the location: 22.06.2018 - Bergen
+... First text element of the report DIV, preceding the location: 22.06.2018 - Bergen
 * Place of the incident in plain text
-...First text element of the report DIV, added after the date.
-...The neighborhood is given wrapped in a following SPAN and an I
-...22.06.2018 - Bergen <span class="small"><i>(Vorpommern-Ruegen)</i></span>
+... First text element of the report DIV, added after the date.
+... The neighborhood is given wrapped in a following SPAN and an I
+... 22.06.2018 - Bergen <span class="small"><i>(Vorpommern-Ruegen)</i></span>
 * Description of the incident
-...A text element wrapped between 2 closed (!) </p> tags
+... A text element wrapped between 2 closed (!) </p> tags
 * Source
-...Wrapped in a SPAN inside the last P of the report's DIV
-...<span class="small">Quelle: Polizei</span>
+... Wrapped in a SPAN inside the last P of the report's DIV
+... <span class="small">Quelle: Polizei</span>
 ### Note
 The reports can be filtered by Landkreis, Motiv, and Delikt.
 This is done with a POST request to https://www.lobbi-mv.de/lobbi-neu/index.php?inhalt=chronik_gewalt
