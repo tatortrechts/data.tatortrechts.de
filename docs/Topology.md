@@ -61,7 +61,7 @@ Each report is contained in a DIV who is a direct child of the wrapper DIV.
 * Place of the incident in plain text
 
   First text element of the report `DIV`, added after the date.  
-  The neighborhood is given wrapped in a following `SPAN` and an `I`  
+  The district is given wrapped in a following `SPAN` and an `I`  
   22.06.2018 - Bergen `<span class="small"><i>(Vorpommern-Ruegen)</i></span>`
 * Description of the incident
 
@@ -95,10 +95,24 @@ The link is inside a H1 under the ARTICLE tag.
 
 ### Data in the report
 * Date of the incident
-* Place of the incident in plain text
-* (Optional) Geocoordinates of the place of the incident
+
+  Found inside the element with classname `post-date`
+* City of the incident in plain text
+
+  Inside the only `SPAN` in a `DIV` with class `stadt`
+* District (Landkreis) of the incident in plain text
+
+  Inside the only `SPAN` in a `DIV` with class `landkreis`
+* Sources
+
+  Separated by comma (,) Inside the only `SPAN` in a `DIV` with class `quelle`
 * Description of the incident
-* (Optional) List of other sources
+
+  Inside the first `P` of the document
+
+* Tags
+
+  Inside `A` with attribute `rel="tag"`
 
 
 ## RAA (Sachsen)
