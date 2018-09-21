@@ -122,7 +122,50 @@ https://raa-sachsen.de/
 ### Reports location
 https://raa-sachsen.de/chronik.html
 
-**TODO**
+#### Pagination
+https://raa-sachsen.de/chronik.html?page_n13=PAGE
+
+#### Access to a single report
+The link is found inside each H1
+
+*WARNING*: The page linked might have less data than what is shown in the summary, but not more (as far as I can tell).  
+For example, see https://raa-sachsen.de/chronik-details/coswig-1051.html compared to its
+summary at https://raa-sachsen.de/chronik.html?page_n13=708
+
+It is better to then scrap the information directly from the reports summary. The following data topology will therefore imply
+that the parent element is not the page, but one of the reports summary wrappers which is are `DIV`s with the class `layout_latest`
+
+### Data in the report
+
+* Date of the incident
+
+  Found wrapped inside the `TIME` element. Its UTC representation is in the `datetime` attribute.
+* Location of the incident in plain text
+
+  Found in the text element following the `TIME` element.  
+  In the format `: City (District)`  
+  **NOTE**: All the districts can be found inside the `title` attribute of `A`s inside `LI`s who are siblings of the `LI` that wraps an `A` where `title="alle Landkreise"`
+* Headline
+
+  For instance: Muslimisches Ehepaar vor Supermarkt angegriffen
+  Found wrapped inside the `STRONG` element.
+* Description of the incident
+
+  Given that the parent `DIV` has N `P` elements in the following order  
+  1: `P`  
+  2: `P`  
+  3: `P`  
+  ...  
+  N-2: `P`  
+  N-1: `P`  
+  N: `P`  
+  The description is wrapped inside all the `P`s from position 3 to N-3 included
+* Source
+
+  Inside the `P` following the last desciption `P` element (at position N-2)  
+  It is sometimes wrapped in a `EM` element inside the `P`, but this is not consistent  
+  Format Quelle: Source1, Source2, ...
+
 
 
 ## Mobile Beratung für Opfer rechter Gewalt (Sachsen-Anhalt)
