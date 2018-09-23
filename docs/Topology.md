@@ -175,7 +175,34 @@ http://www.mobile-opferberatung.de
 ### Reports location
 http://www.mobile-opferberatung.de/monitoring/chronik
 
-**TODO**
+#### Pagination
+http://www.mobile-opferberatung.de/monitoring/chronik`YEAR`/
+
+#### Access to a single report
+All reports for a given year are shown on the same page.
+The rerport starts with an `H5` and ends with a `DIV`
+
+### Data in the report
+
+
+* Date of the incident
+
+  Found inside the `H1` tag, in the format : `dd.mm.yyyy  City (District)`
+* Location of the incident in plain text
+
+  Found inside the `H1` tag, in the format : `dd.mm.yyyy  City (District)`  
+  The district information is optional
+* Source
+
+  Found inside the `H5`, in the format : `Source Name, Source report data(dd.mm.yyyy)`  
+  ex.: `Bundespolizei Magdeburg, 17.09.2018`  
+  In case the organisation itself is the source, the format is then: `Contact point, eigener Bericht`  
+  ex.: `Anlaufstelle Süd, eigener Bericht`  
+  Several sources are separated with ' / '
+* Description of the incident
+
+  Found inside the `P` element inside the `DIV` found after the `H1` element
+
 
 
 ## ezra (Thüringen)
