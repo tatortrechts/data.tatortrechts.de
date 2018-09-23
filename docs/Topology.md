@@ -184,7 +184,6 @@ The rerport starts with an `H5` and ends with a `DIV`
 
 ### Data in the report
 
-
 * Date of the incident
 
   Found inside the `H1` tag, in the format : `dd.mm.yyyy  City (District)`
@@ -212,7 +211,76 @@ https://ezra.de/
 ### Reports location
 https://ezra.de/chronik/
 
-**TODO**
+#### Pagination
+All the reports are displayed on one page.
+
+#### Access to a single report
+The page loads the reports from a JSON file by querying **https://angstraeume.ezra.de/wp-json/ezra/v1/chronic**
+
+The following report will detail the content of the JSON file.
+The general format is:
+
+```
+{
+	entries : Array[{
+		content         : string,
+		endDate         : empty,
+		endYear         : empty,
+		id              : integer,
+		locationDisplay : string,
+		locations       : Array[integer], //see meta.locations
+		motives         : Array[integer], //see meta.motive
+		sourceName      : string,
+		sourceUrl       : URL,
+		startDisplay    : string (d.m.yyyy),
+		startYear       : integer,
+		title           : string
+	}],
+	
+	meta: {
+		lastYear: integer (yyyy),
+		locations: {
+			(integer): string,
+			...
+		},
+		motives: {
+			(integer): string
+		}
+	}
+}
+```
+
+Each single report is an entry in the `entries` array.
+
+
+### Data in the report
+
+* Date of the incident
+
+  `startDisplay`
+* Location of the incident in plain text
+
+  `locationDisplay`
+  Format `Municipality (District)`  
+  For larger cities which do not belong to a district, only the municipality appears
+* Headline
+
+  `title`  
+  For instance: Landtagsabgeordnete von Demonstrant*innen bedroht
+* Description of the incident
+
+  `content`  
+   Contains HTML tags
+* Source name
+
+  `sourceName`
+* Source URL (optional)
+
+  `sourceUrl`
+* Motives
+
+  Use the keys in `motives` to map to `meta.motives`
+
 
 
 ## OBR (Nordrein-Westfalen)
