@@ -176,7 +176,7 @@ http://www.mobile-opferberatung.de
 http://www.mobile-opferberatung.de/monitoring/chronik
 
 #### Pagination
-http://www.mobile-opferberatung.de/monitoring/chronik`YEAR`/
+http://www.mobile-opferberatung.de/monitoring/chronikYEAR/
 
 #### Access to a single report
 All reports for a given year are shown on the same page.
