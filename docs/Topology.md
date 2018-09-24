@@ -180,7 +180,7 @@ http://www.mobile-opferberatung.de/monitoring/chronikYEAR/
 
 #### Access to a single report
 All reports for a given year are shown on the same page.
-The rerport starts with an `H5` and ends with a `DIV`
+The report starts with an `H5` and ends with a `DIV`
 
 ### Data in the report
 
@@ -290,7 +290,43 @@ https://www.opferberatung-rheinland.de
 ### Reports location
 https://www.opferberatung-rheinland.de/chronik-der-gewalt/
 
-**TODO**
+#### Pagination
+https://www.opferberatung-rheinland.de/chronik-der-gewalt/chronik-YEAR/
+
+#### Access to a single report
+All reports for a given year are shown on the same page.
+There is a URL to access a single report, but it does not contain more information than
+what can be found on the index page for the year.
+
+A single report is wrapped in a `DIV` with class `articletype-0`
+
+### Data in the report
+
+* Date of the incident
+
+  Found in a `SPAN` with the attribute `itemprop="headline"`  
+  Format: `d.m.yy: Municipality`  
+  The **:** is optional  
+  Sometimes they are 2 days for a report, in that case the format is: `d./d.m.yy`  
+  or `d. u. d.m.yy`
+* Location of the incident in plain text
+
+  Found in a `SPAN` with the attribute `itemprop="headline"`  
+  Format: `d.m.yy: Municipality`  
+  The **:** is optional  
+  If the incident occured in more than one municipality, the list is given separated by a **/**: Köln/Leverkusen  
+  
+* Description of the incident
+
+   Found wrapped in the first `P` in a `SPAN` with the attribute `itemprop="description"`  
+* Source
+
+  Found wrapped in the second `P` in a `SPAN` with the attribute `itemprop="description"`  
+  Format: `SourceName v. d.m.yy`  
+  Many sources are given separated by comma.  
+  Sometime, 2 sources names ares given together separated by **u.i** , with a single date: `Express.de u. ksta.de v. 1.1.18`  
+  Or the sources names are separated by commas, but there is a single date: `Stern.de, focus.de, welt.de u. zeit.de v. 28.11.1`
+
 
 
 ## Before (München)
