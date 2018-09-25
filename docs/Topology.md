@@ -329,6 +329,58 @@ A single report is wrapped in a `DIV` with class `articletype-0`
 
 
 
+## response (Hessen)
+### Site
+https://response-hessen.de
+
+### Reports location
+https://response-hessen.de/chronik
+
+#### Pagination
+https://response-hessen.de/chronik?page=PAGE
+
+PAGE starts at 0.
+
+**NOTE:** Reports can be classified by motivation behind the violence, by selecting from a list.  
+This triggers an AJAX request normally, but one can also access the filtered set with a `GET` in the format:  
+`https://response-hessen.de/chronik?field_district_tid=All&field_motivation_tid=MOTIVATION_ID&page=PAGE`  
+
+The `MOTIVATION_ID` is found from the values in the `SELECT` with `id="edit-field-motivation-tid"`
+
+#### Access to a single report
+A single report is wrapped in an `ARTICLE` with class `node-chronicle`
+
+### Data in the report
+
+* Date of the incident
+
+  Found in a `SPAN` with class `date-display-single`  
+  Format: `d. Monat YYYY`  
+* Location of the incident in plain text
+
+  Found in the only `H2`  
+  Format: `Municipality (District): Headline`  
+  In case of a larger city like Frankfurt am Main, only the municipality is shown
+* Headline
+
+  Found in the only `H2`  
+  Format: `Municipality (District): Headline`  
+  ex: Rassistischer Angriff auf Familie in Straßenbahn
+* Description of the incident
+
+   Found wrapped in the only `P`
+* Source
+
+  Each source is in a `LI`  
+  If there is a URL to the source, the source name is wrapped in a `A`
+* Motives
+
+  The motive is not in the HTML code, but can be obtained by accessing the reports with a filter.  
+  See the note in **Pagination**
+
+
+
+
 ## Before (München)
 ### Site
 https://www.before-muenchen.de/
@@ -339,13 +391,5 @@ https://muenchen-chronik.de/chronik/
 **TODO**
 
 
-## response (Hessen)
-### Site
-https://response-hessen.de
-
-### Reports location
-https://response-hessen.de/chronik
-
-**TODO**
 
 
