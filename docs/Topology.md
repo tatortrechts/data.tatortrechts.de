@@ -443,7 +443,7 @@ The report is wrapped in an `ARTICLE`. Some information suche as the location, t
 
 
 **NOTE**: The list of municipalities, motives, deeds and contexts can be respectively found on the index page
-from the selects with classes `_sft_category[]`, `_sft_motiv[]`, `_sft_handlung[]` and `_sft_kontext[]`
+from the `SELECT`s with classes `_sft_category[]`, `_sft_motiv[]`, `_sft_handlung[]` and `_sft_kontext[]`
 
 
 
