@@ -2,7 +2,7 @@
 ### Site
 http://www.bud-bayern.de/
 
-### Reports location
+### Reports index
 N/A
 
 
@@ -10,7 +10,7 @@ N/A
 ### Site
 http://www.reachoutberlin.de/
 
-### Reports location
+### Reports index
 https://www.reachoutberlin.de/de/chronik
 
 #### Pagination
@@ -43,7 +43,7 @@ Link is in the 2nd column of the table
 ### Site
 http://www.lobbi-mv.de/
 
-### Reports location
+### Reports index
 https://www.lobbi-mv.de/chronik-rechter-gewalt/
 
 #### Pagination
@@ -84,7 +84,7 @@ The possible values can be found from the `OPTIONS` in the `SELECT`s with the `N
 ### Site
 https://www.opferperspektive.de/
 
-### Reports location
+### Reports index
 https://www.opferperspektive.de/category/rechte-angriffe/chronologie-rechter-angriffe
 
 #### Pagination
@@ -119,7 +119,7 @@ The link is inside a H1 under the ARTICLE tag.
 ### Site
 https://raa-sachsen.de/
 
-### Reports location
+### Reports index
 https://raa-sachsen.de/chronik.html
 
 #### Pagination
@@ -172,7 +172,7 @@ that the parent element is not the page, but one of the reports summary wrappers
 ### Site
 http://www.mobile-opferberatung.de
 
-### Reports location
+### Reports index
 http://www.mobile-opferberatung.de/monitoring/chronik
 
 #### Pagination
@@ -208,7 +208,7 @@ The report starts with an `H5` and ends with a `DIV`
 ### Site
 https://ezra.de/
 
-### Reports location
+### Reports index
 https://ezra.de/chronik/
 
 #### Pagination
@@ -287,7 +287,7 @@ Each single report is an entry in the `entries` array.
 ### Site
 https://www.opferberatung-rheinland.de
 
-### Reports location
+### Reports index
 https://www.opferberatung-rheinland.de/chronik-der-gewalt/
 
 #### Pagination
@@ -333,7 +333,7 @@ A single report is wrapped in a `DIV` with class `articletype-0`
 ### Site
 https://response-hessen.de
 
-### Reports location
+### Reports index
 https://response-hessen.de/chronik
 
 #### Pagination
@@ -385,10 +385,68 @@ A single report is wrapped in an `ARTICLE` with class `node-chronicle`
 ### Site
 https://www.before-muenchen.de/
 
-### Reports location
+### Reports index
 https://muenchen-chronik.de/chronik/
 
-**TODO**
+#### Pagination
+https://muenchen-chronik.de/chronik/?sf_paged=PAGE
+
+PAGE starts at 1
+
+#### Access to a single report
+Each report summary on the index page is wrapped in an `ARTICLE`. The link to the whole report is found in a `A` with class `more`.
+
+### Data in the report
+
+The report is wrapped in an `ARTICLE`. Some information suche as the location, the motive, etc.. are found in its `class` attribute.
+
+* Date of the incident
+
+  Found in a `H1` with class `entry-title`  
+  Format: `d. Monat YYYY - Headline`  
+  Sometimes they are 2 days for a report, in that case the format is: `d./d. Monat YYYY`  
+* Location of the incident in plain text
+
+  Inside the class attribute of the `ARTICLE`  
+  Format: `category-municipality`  
+  Ex.: category-ba-01-altstadt-lehel, category-landkreis-muenchen, category-unbekannt
+* Headline
+
+  Found in a `H1` with class `entry-title`  
+  Format: `d. Monat YYYY - Headline`  
+  ex: Rassistische Beleidigung und Angriff
+* Description of the incident
+
+   Found wrapped in the only `P` of the `DIV` with class `entry-content`
+* Source
+
+  Found in the only `SPAN` with class `smallinfo`  
+  Format: `Quelle: source1, source2, ...`  
+  Ex.: a.i.d.a., firm, Pressebericht des Polizeipräsidiums München vom 28. August 2018, sueddeutsche.de vom 28. August 2018  
+  Sometimes a comma (,) to separate 2 sources is replaced by **und**.  
+  Ex.: a.i.d.a., Mitteilung der Bundespolizeiinspektion München vom 10. September 2018 und Artikel der „Süddeutschen Zeitung“ (Online-Version, www.sueddeutsche.de) vom 10. September 2018
+* Motives
+
+  Inside the class attribute of the `ARTICLE`  
+  Format: `motiv-motive`  
+  Ex.: motiv-rassismus
+* Deed
+
+  Inside the class attribute of the `ARTICLE`  
+  Format: `handlung-deed`  
+  Ex.: handlung-beleidigung-beschimpfung-bedrohung
+* Context
+
+  Inside the class attribute of the `ARTICLE`  
+  Format: `kontext-context`  
+  Ex.: kontext-arbeitsplatz
+
+
+**NOTE**: The list of municipalities, motives, deeds and contexts can be respectively found on the index page
+from the selects with classes `_sft_category[]`, `_sft_motiv[]`, `_sft_handlung[]` and `_sft_kontext[]`
+
+
+
 
 
 
