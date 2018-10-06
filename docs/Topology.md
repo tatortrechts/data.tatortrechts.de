@@ -398,7 +398,7 @@ Each report summary on the index page is wrapped in an `ARTICLE`. The link to th
 
 ### Data in the report
 
-The report is wrapped in an `ARTICLE`. Some information suche as the location, the motive, etc.. are found in its `class` attribute.
+The report is wrapped in an `ARTICLE`. Some information such as the location, the motive, etc.. are found in its `class` attribute.
 
 * Date of the incident
 
