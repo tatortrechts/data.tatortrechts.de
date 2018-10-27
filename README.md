@@ -10,7 +10,7 @@ The main goals of this project is to open up the available data even more by:
  - scraping existing data sources to make them available under the unified format
  - developing software tools to use the data
 
-## Right-Wing motivated crimes, official definition
+## Crimes motivatd by right-wing ideology, official definition from the german police
 >„Der wesentliche Kerngedanke einer „rechten“ Ideologie ist die Annahme einer Ungleichheit/Ungleichwertigkeit der Menschen.“ Als PMK- rechts zählt demnach, „wenn in Würdigung der Umstände der Tat und/oder der Einstellung des Täters Anhaltspunkte dafür vorliegen, dass sie sich gegen eine Person wegen ihrer/ihres zugeschriebenen oder tatsächlichen politischen Haltung, Einstellung und/oder Engagements, Nationalität, ethnischen Zugehörigkeit, Hautfarbe, Religionszugehörigkeit, Weltanschauung, sozialen Status physischen und/oder psychischen Behinderung oder Beeinträchtigung, sexuellen Orientierung und/oder sexuellen Identität oder äußeren Erscheinungsbildes, gerichtet sind und die Tathandlung damit im Kausalzusammenhang steht bzw. sich in diesem Zusammenhang gegen eine Institution/Sache oder ein Objekt richtet.“ (Bundesministerium des Inneren/ Bundesministerium der Justiz (Hrsg.): Definitionssystem Politisch motivierte Kriminalität. Berlin 2016.)
 
 Source: [VBRG](https://verband-brg.de/index.php/monitoring)
@@ -43,6 +43,7 @@ A module to handle the setup of a SQLITE database and the insertion of records f
 
 ## Related pojects
 A visualization: https://vis.one/rechte-gewalt/
+
 An atlas of Right-Wing violence in Germany: https://rechtesland.de/
 
 ## Contributing
