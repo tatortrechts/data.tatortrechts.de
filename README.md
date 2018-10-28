@@ -5,7 +5,7 @@ This repository is an effort to provide an unified and open data source on right
 At the moment, right-wing violence reports publishers on the web are making the data available on their sites in a more or less structured way, without adhering to a common format.
 In terms of Tim Berners-Lee "5 stars" (https://5stardata.info/en/) Open Data deployment scheme, these sources of data have reached 2 to 3 stars.
 
-The main goals of this project is to open up the available data even more by:
+The main goal of this project is to open up the available data even more by:
  - developing a common data schema to structure the information from right-wing violence chronicles
  - scraping existing data sources to make them available under the unified format
  - developing software tools to use the data
