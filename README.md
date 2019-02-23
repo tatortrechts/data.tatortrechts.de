@@ -36,17 +36,19 @@ Scrapers are setup to run on the [Morph.io](https://morph.io/) service. So far t
 - München: [Data](https://morph.io/kremio/rwv-de-by-before), [Scraper](https://github.com/kremio/rwv-de-by-before), [Website](https://muenchen-chronik.de/)
 - Sachsen-Anhalt: [Data](https://morph.io/jfilter/mobile-opferberatung-scraper), [Scraper](https://github.com/jfilter/mobile-opferberatung-scraper), [Website](https://www.mobile-opferberatung.de/monitoring/chronik-2019/)
 - Sachsen: [Data](https://morph.io/jfilter/raa-sachsen-scraper), [Scraper](https://github.com/jfilter/raa-sachsen-scraper), [Website](https://www.raa-sachsen.de/chronik.html)
+- Brandenburg: [Data](https://morph.io/jfilter/opferperspektive-scraper), [Scraper](https://github.com/jfilter/opferperspektive-scraper), [Website](https://www.opferperspektive.de/category/rechte-angriffe/chronologie-rechter-angriffe)
+- Thüringen: [Data](https://morph.io/redadmiral/ezra_scraper), [Scraper](https://github.com/redadmiral/ezra_scraper), [Website](https://ezra.de/chronik/)
+- Mecklenburg-Vorpommern: [Data](), [Scraper](), [Website]()
 
 Tools to support writing scrapers:
 - https://github.com/kremio/rwv-sqlite-js  
 A module to handle the setup of a SQLITE database and the insertion of records from Right-Wing violence reports in JSON 
 
 ## Related pojects
-A visualization: https://vis.one/rechte-gewalt/
 
-An atlas of Right-Wing violence in Germany: https://rechtesland.de/
-
-Another visualization of violence against refugees (Data by AAS): https://github.com/ax3l/chronik-vorfaelle
+- A visualization: https://vis.one/rechte-gewalt/
+- An atlas of Right-Wing violence in Germany: https://rechtesland.de/
+- Another visualization of violence against refugees (Data by AAS): https://github.com/ax3l/chronik-vorfaelle
 
 ## Contributing
 
