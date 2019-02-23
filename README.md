@@ -46,6 +46,8 @@ A visualization: https://vis.one/rechte-gewalt/
 
 An atlas of Right-Wing violence in Germany: https://rechtesland.de/
 
+Another visualization of violence against refugees (Data by AAS): https://github.com/ax3l/chronik-vorfaelle
+
 ## Contributing
 
 Anyone is welcome to join! Checkout the [open issues](https://github.com/codeforberlin/right-wing-violence-de/issues) of this Github repository to see what tasks require help.
