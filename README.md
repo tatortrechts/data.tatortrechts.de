@@ -31,11 +31,11 @@ Tools to validate reports against the schema:
 - For Node.js: https://github.com/kremio/rwv-schema-js
 
 ## Scrapers
-Scrapers are setup to run on the [Morph.io](https://morph.io/) service.
+Scrapers are setup to run on the [Morph.io](https://morph.io/) service. So far the following scrapers are available:
 
-So far the following scrapers are available:
-- München https://morph.io/kremio/rwv-de-by-before  (Scraping https://muenchen-chronik.de/, [Scraper](https://github.com/kremio/rwv-de-by-before))
-- Sachsen-Anhalt: https://morph.io/jfilter/mobile-opferberatung-scraper (Scraping:https://www.mobile-opferberatung.de/monitoring/chronik-2019/ , [Scraper](https://github.com/jfilter/mobile-opferberatung-scraper)
+- München: [Data](https://morph.io/kremio/rwv-de-by-before), [Scraper](https://github.com/kremio/rwv-de-by-before), [Website](https://muenchen-chronik.de/)
+- Sachsen-Anhalt: [Data](https://morph.io/jfilter/mobile-opferberatung-scraper), [Scraper](https://github.com/jfilter/mobile-opferberatung-scraper), [Website](https://www.mobile-opferberatung.de/monitoring/chronik-2019/)
+- Sachsen: [Data](https://morph.io/jfilter/raa-sachsen-scraper), [Scraper](https://github.com/jfilter/raa-sachsen-scraper), [Website](https://www.raa-sachsen.de/chronik.html)
 
 Tools to support writing scrapers:
 - https://github.com/kremio/rwv-sqlite-js  
