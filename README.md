@@ -34,8 +34,8 @@ Tools to validate reports against the schema:
 Scrapers are setup to run on the [Morph.io](https://morph.io/) service.
 
 So far the following scrapers are available:
-- https://morph.io/kremio/rwv-de-by-before  
-Scraping site https://muenchen-chronik.de/
+- München https://morph.io/kremio/rwv-de-by-before  (Scraping https://muenchen-chronik.de/, [Scraper](https://github.com/kremio/rwv-de-by-before))
+- Sachsen-Anhalt: https://morph.io/jfilter/mobile-opferberatung-scraper (Scraping:https://www.mobile-opferberatung.de/monitoring/chronik-2019/ , [Scraper](https://github.com/jfilter/mobile-opferberatung-scraper)
 
 Tools to support writing scrapers:
 - https://github.com/kremio/rwv-sqlite-js  
