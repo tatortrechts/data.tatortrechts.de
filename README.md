@@ -38,7 +38,7 @@ Scrapers are setup to run on the [Morph.io](https://morph.io/) service. So far t
 - Sachsen: [Data](https://morph.io/jfilter/raa-sachsen-scraper), [Scraper](https://github.com/jfilter/raa-sachsen-scraper), [Website](https://www.raa-sachsen.de/chronik.html)
 - Brandenburg: [Data](https://morph.io/jfilter/opferperspektive-scraper), [Scraper](https://github.com/jfilter/opferperspektive-scraper), [Website](https://www.opferperspektive.de/category/rechte-angriffe/chronologie-rechter-angriffe)
 - Thüringen: [Data](https://morph.io/redadmiral/ezra_scraper), [Scraper](https://github.com/redadmiral/ezra_scraper), [Website](https://ezra.de/chronik/)
-- Mecklenburg-Vorpommern: [Data](), [Scraper](), [Website]()
+- Mecklenburg-Vorpommern: [Data](https://morph.io/schwukas/rwv-de-mv-lobbi), [Scraper](https://github.com/schwukas/rwv-de-mv-lobbi), [Website](https://www.lobbi-mv.de/chronik-rechter-gewalt/)
 
 Tools to support writing scrapers:
 - https://github.com/kremio/rwv-sqlite-js  
