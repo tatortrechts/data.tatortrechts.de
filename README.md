@@ -31,11 +31,11 @@ The VBRG is the umbrealla organisation for various local NGOs. VBRG stands for _
 
 Some members organisations of the VBRG, as part of their monitoring mission, provide chronicles of incidents at a regional level. We collect information about what data is available from these ressources and how the data is structured.
 
-[We collect the information here.](/docs/Topology.md)
+[We collect the information here.](/Organisations.md)
 
 ## Reports format
 
-[We propose a format how incidents report should be structured (technically).](/docs/ReportFormat.md)
+[We propose a format how incidents report should be structured (technically).](/Format.md)
 
 ## Scrapers
 
