@@ -1,12 +1,12 @@
 # Format for Incidents of Right-wing Violence
 
-In Germany, there are multiple organizations that collect data on right-wing violence. But there is no common format and it's mostly just writting on a web page. So we constructed a format to work with
+In Germany, there are multiple organizations that collect data on right-wing violence. But there is no common format and it's mostly semi-structed text on a web page. So we came up with a format to work with internally.
 
 ## An Entry of an Incident
 
 ```
 {
-    uri                 : string,
+    url                 : string,
     aggregator          : string,
     title               : string,
     description         : string,
@@ -32,11 +32,11 @@ In Germany, there are multiple organizations that collect data on right-wing vio
 
 ## Fields
 
-### uri (required)
+### url (required)
 
-A **U**niversal **R**esource **I**dentifier to the original report. Sometimes organisations provide URIs. If not you have construct one by combining, e.g. location and date.
+A URL to the web pager where the incident was reported. The URL may be unique but does not have to me. Some organisations do not provide individual URLs for each incident.
 
-**ex.** https://muenchen-chronik.de/8-september-2018-rassistische-beleidigung-und-angriff/
+**ex.** https://www.mobile-opferberatung.de/monitoring/chronik-2019/
 
 ### aggregator (required)
 
