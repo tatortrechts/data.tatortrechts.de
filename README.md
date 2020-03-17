@@ -50,7 +50,7 @@ Scrapers are setup to run on the [Morph.io](https://morph.io/) service. So far t
 
 ## Tools
 
-Tools to support writing scrapers:
+Tools to support writing scrapers (_currently not working properly_):
 
 - A module to handle the setup of a SQLITE database and the insertion of records from Right-Wing violence reports in JSON
   https://github.com/kremio/rwv-sqlite-js
