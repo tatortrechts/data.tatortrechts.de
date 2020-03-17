@@ -7,6 +7,7 @@ In Germany, there are multiple organizations that collect data on right-wing vio
 ```
 {
     url                 : string,
+    identifier          : string,
     aggregator          : string,
     title               : string,
     description         : string,
@@ -37,6 +38,12 @@ In Germany, there are multiple organizations that collect data on right-wing vio
 A URL to the web pager where the incident was reported. The URL may be unique but does not have to me. Some organisations do not provide individual URLs for each incident.
 
 **ex.** https://www.mobile-opferberatung.de/monitoring/chronik-2019/
+
+### identifier (required)
+
+If the organisation provides URLs for each incident, use them. Otherwise generate some kind of unique string based on location, date and description. For instance, calculate the MD5 hash by concatenating location, date and description.
+
+**ex.** https://muenchen-chronik.de/8-september-2018-rassistische-beleidigung-und-angriff/
 
 ### aggregator (required)
 
