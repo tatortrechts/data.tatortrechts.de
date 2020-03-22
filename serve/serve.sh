@@ -16,5 +16,5 @@ fi
 
 # install dependencies, wrangle data, serve
 pip3 install datasette datasette-cluster-map clean-text dataset requests notebook &&
-rm -f rechtegewalt.db; jupyter nbconvert --execute combine.ipynb --ExecutePreprocessor.timeout=999999999999999999 &&
-datasette serve -h 0.0.0.0 -i rechtegewalt.db 
+rm -f rechtegewalt.db* ; jupyter nbconvert --execute combine.ipynb --ExecutePreprocessor.timeout=999999999999999999 &&
+datasette serve --cors -h 0.0.0.0 -i rechtegewalt.db 
