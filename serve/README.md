@@ -1,5 +1,11 @@
 # Serving Data via Datasette
 
+Install dependencies.
+
+```bash
+pip3 install datasette datasette-cluster-map clean-text dataset requests notebook 
+```
+
 Create a file `secrets.txt` with the following three lines.
 
 ```bash
@@ -8,7 +14,9 @@ Create a file `secrets.txt` with the following three lines.
 <password-geocode>
 ```
 
-Then execute `bash serve.sh`.
+Then execute `bash update.sh`.
+
+To serve data, run `datasette serve -h 0.0.0.0 --cors -i rechtegewalt.db`
 
 Add more scrapers to [scrapers.txt](./scrapers.txt).
 
