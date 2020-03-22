@@ -1,0 +1,4 @@
+*.db
+*.db*
+secrets.txt
+*.html
