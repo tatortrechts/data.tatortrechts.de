@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "data.rechtegewalt.info"
+version = "0.0.0"
+description = ""
+authors = ["Johannes Filter <hi@jfilter.de>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+datasette = "*"
+datasette-cluster-map = "*"
+clean-text = "*"
+dataset = "*"
+requests = "*"
+notebook = "*"
+unidecode = "*"
+jupyterlab = "*"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
