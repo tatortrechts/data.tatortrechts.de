@@ -6,13 +6,12 @@ authors = ["Johannes Filter <hi@jfilter.de>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.6"
 datasette = "*"
 datasette-cluster-map = "*"
 clean-text = "*"
 dataset = "*"
 requests = "*"
-notebook = "*"
 unidecode = "*"
 jupyterlab = "*"
 
