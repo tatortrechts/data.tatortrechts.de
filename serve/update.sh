@@ -5,17 +5,15 @@ set -x
 # pass random argument (bash serve.sh --random) to avoid updating data
 if [ -z "$1" ]; then
     echo "Fetching new data"
-    mkdir -p data && rm -f data/* && rm -f input.txt && python3 add_secret.py
-    i=0
-    wget -i input.txt -P data
-    for fn in data/*; do
-        mv $fn data/data_$i.db
-        i=$((i + 1))
-    done && rm input.txt
+    mkdir -p data && rm -f input.txt && python3 add_secret.py
+
+    # NB: file has to be ended with `\n`
+    while IFS=' ' read -r url file_name; do
+        wget -O data/"$file_name" "$url"
+    done <input.txt
+    rm input.txt
 fi
 
-# install dependencies, wrangle data, serve
-# pip3 install datasette datasette-cluster-map clean-text dataset requests notebook &&
 rm -f rechtegewalt.db*
 jupyter nbconvert --execute combine.ipynb --ExecutePreprocessor.timeout=999999999999999999
 python add_geo.py
