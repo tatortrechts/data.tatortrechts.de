@@ -1,4 +1,3 @@
-import platform
 from pathlib import Path
 
 import dataset
@@ -31,7 +30,7 @@ for x in urls:
     if db_count != morph_count:
         to_download.append(x + key_url + ' ' + db_name)
 
-if platform.system() == 'Linux':
+if len(to_download) > 0:
     Path('input.txt').write_text('\n'.join(to_download) + '\n')
 else:
-    Path('input.txt').write_text('\n'.join(to_download))
+    Path('input.txt').write_text('')
