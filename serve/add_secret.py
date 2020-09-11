@@ -30,4 +30,4 @@ for x in urls:
     if db_count != morph_count:
         to_download.append(x + key_url + ' ' + db_name)
 
-Path('input.txt').write_text('\n'.join(to_download) + '\n')
+Path('input.txt').write_text('\n'.join(to_download))
