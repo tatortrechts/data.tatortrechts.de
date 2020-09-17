@@ -61,12 +61,26 @@ Tools to support writing scrapers (_currently not working properly_):
 
 ### Visualisations
 
+#### DE
+
 - https://vis.one/rechte-gewalt/
 - https://rechtesland.de/
 - https://github.com/ax3l/chronik-vorfaelle violence against refugees (Data by AAS)
 - https://www.tagesspiegel.de/politik/interaktive-karte-todesopfer-rechter-gewalt-in-deutschland-seit-der-wiedervereinigung/23117414.html
 - https://www.welt.de/politik/deutschland/article139562077/Karte-der-Gewalt-und-Proteste-gegen-Fluechtlinge.html
 - https://www.zeit.de/politik/deutschland/2015-08/gewalt-gegen-fluechtlinge-rassismus-deutschland-anschlaege-koerperverletzung
+- https://interaktiv.tagesspiegel.de/lab/antisemitische-uebergriffe-so-wurde-die-gewalt-zum-flaechenbrand/
+
+#### US
+
+- https://www.splcenter.org/hate-map
+
+
+
+### Random Maps
+
+- https://correctiv.org/aktuelles/ungerechte-arbeit/2017/08/01/datenauswertung-so-viele-frauen-tappen-in-
+die-minijob-falle
 
 ## New Sources
 
