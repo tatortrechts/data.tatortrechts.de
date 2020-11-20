@@ -16,6 +16,8 @@ unidecode = "*"
 jupyterlab = "*"
 pycountry = "^20.7.3"
 tqdm = "^4.48.2"
+nb-black = "^1.0.7"
+black = "^20.8b1"
 
 [tool.poetry.dev-dependencies]
 
