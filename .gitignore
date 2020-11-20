@@ -2,3 +2,4 @@
 *.db*
 secrets.txt
 *.html
+serve/.ipynb_checkpoints
