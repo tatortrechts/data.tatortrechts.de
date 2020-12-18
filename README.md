@@ -75,12 +75,10 @@ Tools to support writing scrapers (_currently not working properly_):
 
 - https://www.splcenter.org/hate-map
 
-
-
 ### Random Maps
 
 - https://correctiv.org/aktuelles/ungerechte-arbeit/2017/08/01/datenauswertung-so-viele-frauen-tappen-in-
-die-minijob-falle
+  die-minijob-falle
 
 ## New Sources
 
@@ -89,8 +87,8 @@ die-minijob-falle
 
 ## Contributing
 
-Anyone is welcome to join! Checkout the [open issues](https://github.com/dmedak/right-wing-violence-de/issues) of this Github repository to see what tasks require help.
+Anyone is welcome to join! Checkout the [open issues](https://github.com/rechtegewalt/data.tatortrechts.de/issues) of this Github repository to see what tasks require help.
 
 Open a ticket if you have any questions or suggestions.
 
-Also take a look at the [project's kanban](https://github.com/dmedak/right-wing-violence-de/projects/1) to see what we are currently working on.
+Also take a look at the [project's kanban](https://github.com/rechtegewalt/data.tatortrechts.de/projects/1) to see what we are currently working on.
