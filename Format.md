@@ -5,7 +5,7 @@ But there is no common format and it's mostly semi-structured text on a web page
 So we came up with a format to work with internally.
 
 This format describes the data format / database schema for the scrapers.
-This initally format will get transformed / enriched / cleaned in our pipeline (more details in [aggregate](../aggregate/)).
+This initally format will get transformed / enriched / cleaned in our pipeline (more details in [aggregate](https://github.com/rechtegewalt/data.tatortrechts.de/tree/master/aggregate)).
 We will provide more information about final data at some point.
 
 ## Overview of the Database Schema
