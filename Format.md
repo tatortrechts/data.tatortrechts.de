@@ -4,29 +4,27 @@ In Germany, there are multiple organizations that collect data on right-wing vio
 But there is no common format and it's mostly semi-structured text on a web page.
 So we came up with a format to work with internally.
 
-## An Entry of an Incident
+This format describes the data format / database schema for the scrapers.
+This initally format will get transformed / enriched / cleaned in our pipeline (more details in [aggregate](../aggregate/)).
+We will provide more information about final data at some point.
+
+## Overview of the Database Schema
+
+For now, make some assumptions. An incident can only have on location and date.
+This may change at a later point.
+
+### Incident
 
 ```
 {
-    url                 : string,
     rg_id               : string,
     chronicler          : string,
+    url                 : string,
     title               : string,
     description         : string,
     date                : UTC,
-    date_end            : UTC,
-    locations           : [{
-        iso3166_1    : string,
-        iso3166_2    : string,
-        subdivisions : [string],
-        latitude     : number,
-        longitude    : number
-    }],
-    sources             : [{
-        name         : string,
-        date         : UTC,
-        url          : string
-    }],
+    county              : string,
+    city                : string,
     motives             : [string],
     contexts            : [string],
     factums             : [string],
@@ -34,13 +32,37 @@ So we came up with a format to work with internally.
 }
 ```
 
-## Fields
+### Source
 
-### url (required)
+Sources for an incident.
 
-A URL to the web pager where the incident was reported. The URL may be unique but does not have to me. Some organizations do not provide individual URLs for each incident.
+```
+{
+    rg_id               : string,
+    name                : string,
+    date                : UTC,
+    url                 : string
+}
+```
 
-**ex.** https://www.mobile-opferberatung.de/monitoring/chronik-2019/
+### Chronicler
+
+The entity (organization) that collected incidents.
+
+```
+{
+    iso3166_1               : string,
+    iso3166_2               : string,
+    chronicler_name         : string,
+    chronicler_description  : string,
+    chronicler_url          : string,
+    chronicle_source        : string,
+}
+
+```
+
+## Fields for Incident
+
 
 ### rg_id (required)
 
@@ -48,11 +70,16 @@ A unique identifier for an incident (**r**echte **g**ewalt). If the organization
 
 **ex.** https://muenchen-chronik.de/8-september-2018-rassistische-beleidigung-und-angriff/
 
-### aggregator (required)
+### chronicler (required)
 
 Which organisation collected the information?
 
-**ex.** Mobile Opferberatung (Sachsen-Anhalt)
+**ex.** Mobile Opferberatung
+### url (required)
+
+A URL to the web pager where the incident was reported. The URL may be unique but does not have to me. Some organizations do not provide individual URLs for each incident.
+
+**ex.** https://www.mobile-opferberatung.de/monitoring/chronik-2019/
 
 ### title
 
@@ -68,74 +95,17 @@ A text describing the incident in details.
 
 ### date (required)
 
-When the incident started
+When the incident happend.
 
 **ex.** 2018-09-08T00:00:00+02:00
 
-### date_end
+### city
 
-If the incident occurred over more than a single day, this field contains the date of the day when it ended.
+*Ort*
 
-**ex.** 2018-09-10T00:00:00+02:00
+### county
 
-
-### locations
-
-Provides additional information about where the incident happened.
-The array must contain at least one entry.
-
-### iso3166_1 (required)
-
-See https://en.wikipedia.org/wiki/ISO_3166-1
-
-**ex.** "DE"
-
-### iso3166_2
-
-See https://en.wikipedia.org/wiki/ISO_3166-2:DE
-
-**ex.** "DE-BE"
-
-#### subdivisions (required)
-
-An array of names of administrative subdivisions ordered in descending precision indicating where the incident happened. Stick to German location names since the provided locations are already in German. Use a tuple with the proper German name to specify a subdivision e.g. the county (*Landkreis*). The first item is most likely the *Gemeinde*.
-
-**ex.** ["Haldensleben", ["Landkreis", "Börde"]]
-
-For cities, the first item is usually a district.
-
-**ex.** [["Bezirk", "Pankow"], "Berlin"]
-
-
-#### latitude/longitude (required)
-
-Geo coordinations tuple in decimal degrees.
-The coordinate system is WGS 84, the same used by OpenStreetMap.
-See https://wiki.openstreetmap.org/wiki/Converting_to_WGS84
-
-**ex.** 48.133333
-
-### sources
-
-Information about the original source of the incident report.
-
-#### name
-
-The name of the source
-
-**ex.** Mitteilung der Bundespolizeiinspektion München
-
-#### date
-
-When was the incident first reported by the source.
-
-**ex.** 2018-09-08T00:00:00+02:00
-
-#### url
-
-A link to the original source, e.g., news article.
-
-**ex.** https://www.sueddeutsche.de/
+*Landkreis*
 
 ### motives
 
@@ -151,6 +121,8 @@ A list of keywords describing in what context the violence took place. It can be
 
 ### factums
 
+German: _Delikt_, _Handlung_
+
 A list of keywords describing the violent actions commited.
 
 **ex.** ["Beleidigung","Sachbeschädigung"]
@@ -161,3 +133,44 @@ A list of keywords describing the violent actions commited.
 
 A list of keywords that help categorizing the report but does not fall
 in the motives, contexts and factums groups.
+
+## Fields for Source
+
+Information about the original source of the incident report.
+
+### name
+
+The name of the source
+
+**ex.** Mitteilung der Bundespolizeiinspektion München
+
+### date
+
+When was the incident first reported by the source.
+
+**ex.** 2018-09-08T00:00:00+02:00
+
+### url
+
+A link to the original source, e.g., news article.
+
+**ex.** https://www.sueddeutsche.de/
+
+## Fields for Aggregator
+
+
+### iso3166_1 (required)
+
+See https://en.wikipedia.org/wiki/ISO_3166-1
+
+**ex.** "DE"
+
+### iso3166_2
+
+See https://en.wikipedia.org/wiki/ISO_3166-2:DE
+
+**ex.** "DE-BE"
+
+
+TODO: describe the other fields
+

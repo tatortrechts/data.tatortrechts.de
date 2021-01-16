@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "data.rechtegewalt.info"
+name = "data.tatortrechts.de"
 version = "0.0.0"
 description = ""
 authors = ["Johannes Filter <hi@jfilter.de>"]
