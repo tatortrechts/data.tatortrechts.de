@@ -1,12 +1,12 @@
 # Serving Data via Datasette
 
-Install [poetry](https://python-poetry.org/) and install all Python dependencies:
+Install [poetry](https://python-poetry.org/) and install all dependencies:
 
 ```bash
 poetry install
 ```
 
-In addtion, install [spatialite](https://docs.datasette.io/en/stable/spatialite.html) (platform-dependant).
+In addition, install [spatialite](https://docs.datasette.io/en/stable/spatialite.html) (platform-dependant).
 
 Create a file `secrets.txt` with the following three lines.
 
@@ -22,7 +22,7 @@ Add more scrapers to [scrapers.txt](./scrapers.txt).
 
 Wrangle data in [combine.ipynb](./combine.ipynb).
 
-Execute `bash update.sh` to fetch new data.
+Run `./update.sh` to fetch and process new data.
 You need to have a instace of [geocode-cache-service](https://github.com/beyondopen/geocode-cache-service) running and specify the URL of this instance in [combine.ipynb](./combine.ipynb) (TODO: make this easier).
 
 ## Production
