@@ -2,7 +2,7 @@ import sqlite3
 conn = sqlite3.connect('rechtegewalt.db')
 # Lead the spatialite extension:
 conn.enable_load_extension(True)
-conn.load_extension('/usr/lib/x86_64-linux-gnu/mod_spatialite.so')
+conn.load_extension('/usr/local/lib/mod_spatialite.dylib')
 # Initialize spatial metadata for this database:
 conn.execute('select InitSpatialMetadata(1)')
 # Add a geometry column called point_geom to our museums table:
