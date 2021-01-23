@@ -1,3 +1,12 @@
 https://morph.io/rechtegewalt/mobile-opferberatung-scraper
 https://morph.io/rechtegewalt/opferperspektive-scraper
 https://morph.io/rechtegewalt/raa-sachsen-scraper
+https://morph.io/rechtegewalt/muenchen-chronik-scraper
+https://morph.io/rechtegewalt/mpower-scraper
+https://morph.io/rechtegewalt/opferberatung-rheinland-scraper
+https://morph.io/rechtegewalt/response-scraper
+https://morph.io/rechtegewalt/kleine-randnotiz-converter
+https://morph.io/rechtegewalt/leuchtlinie-scraper
+https://morph.io/rechtegewalt/reachout-scraper
+https://morph.io/rechtegewalt/ezra-converter
+https://morph.io/rechtegewalt/lobbi-scraper
