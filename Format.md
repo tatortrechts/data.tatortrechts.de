@@ -8,6 +8,16 @@ This format describes the data format / database schema for the scrapers.
 This initally format will get transformed / enriched / cleaned in our pipeline (more details in [aggregate](https://github.com/rechtegewalt/data.tatortrechts.de/tree/master/aggregate)).
 We will provide more information about final data at some point.
 
+## Simplifications
+
+For the first version of this formar, we made several simplifications.
+These should be addressed in future work.
+
+- each incident can only have one location
+- each incident can only have one date
+- tags, factums, motives are only concatenated lists
+- each incident can have a date, but not a datetime (some chronicles provide the time in the body text (e.g. reach out))
+
 ## Overview of the Database Schema
 
 For now, make some assumptions. An incident can only have on location and date.
@@ -63,10 +73,12 @@ The entity (organization) that collected incidents.
 
 ## Fields for Incident
 
-
 ### rg_id (required)
 
-A unique identifier for an incident (**r**echte **g**ewalt). If the organization provides URLs for each incident, use them. Otherwise generate some kind of unique string based on location, date and description. For instance, calculate the MD5 hash by concatenating location, date and description.
+A unique identifier for an incident (**r**echte **g**ewalt).
+If the organization provides URLs for each incident, use them.
+Otherwise generate some kind of unique string based on chronicle, location, date and description.
+For instance, 'chronicle_name' + calculate the MD5 hash by concatenating location, date and description.
 
 **ex.** https://muenchen-chronik.de/8-september-2018-rassistische-beleidigung-und-angriff/
 
@@ -75,6 +87,7 @@ A unique identifier for an incident (**r**echte **g**ewalt). If the organization
 Which organisation collected the information?
 
 **ex.** Mobile Opferberatung
+
 ### url (required)
 
 A URL to the web pager where the incident was reported. The URL may be unique but does not have to me. Some organizations do not provide individual URLs for each incident.
@@ -101,11 +114,11 @@ When the incident happend.
 
 ### city
 
-*Ort*
+_Ort_
 
 ### county
 
-*Landkreis*
+_Landkreis_
 
 ### motives
 
@@ -158,7 +171,6 @@ A link to the original source, e.g., news article.
 
 ## Fields for Aggregator
 
-
 ### iso3166_1 (required)
 
 See https://en.wikipedia.org/wiki/ISO_3166-1
@@ -171,6 +183,4 @@ See https://en.wikipedia.org/wiki/ISO_3166-2:DE
 
 **ex.** "DE-BE"
 
-
 TODO: describe the other fields
-
