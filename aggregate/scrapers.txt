@@ -5,7 +5,7 @@ https://morph.io/rechtegewalt/muenchen-chronik-scraper
 https://morph.io/rechtegewalt/mpower-scraper
 https://morph.io/rechtegewalt/opferberatung-rheinland-scraper
 https://morph.io/rechtegewalt/response-scraper
-https://morph.io/rechtegewalt/kleine-randnotiz-converter
+https://morph.io/rechtegewalt/keine-randnotiz-converter
 https://morph.io/rechtegewalt/leuchtlinie-scraper
 https://morph.io/rechtegewalt/reachout-scraper
 https://morph.io/rechtegewalt/ezra-converter
