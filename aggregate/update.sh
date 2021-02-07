@@ -2,6 +2,11 @@
 set -e
 set -x
 
+# hacky way to adapt it to current way to handle secrets, FIXME
+echo "$SECRET_MORPH_IO" >> /app/secrets.txt
+echo "$USER_GEOCODE" >> /app/secrets.txt
+echo "$PASSWORD_GEOCODE" >> /app/secrets.txt
+
 # pass random argument (bash serve.sh --random) to avoid updating data
 if [ -z "$1" ]; then
     echo "Fetching new data"

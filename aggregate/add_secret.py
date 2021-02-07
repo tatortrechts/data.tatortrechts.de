@@ -3,8 +3,8 @@ from pathlib import Path
 import dataset
 import requests
 
-urls = Path('scrapers.txt').read_text().split()
-key = Path('secrets.txt').read_text().split()[0]
+urls = Path('/app/scrapers.txt').read_text().split()
+key = Path('/app/secrets.txt').read_text().split()[0]
 key_url = '/data.sqlite?key=' + key
 
 to_download = []
