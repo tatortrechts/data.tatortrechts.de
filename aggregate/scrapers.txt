@@ -10,3 +10,4 @@ https://morph.io/rechtegewalt/leuchtlinie-scraper
 https://morph.io/rechtegewalt/reachout-scraper
 https://morph.io/rechtegewalt/ezra-converter
 https://morph.io/rechtegewalt/lobbi-scraper
+https://morph.io/rechtegewalt/aas-todesopfer-scraper
