@@ -1,4 +1,6 @@
-# Format for Incidents of Right-wing Violence
+# RGF: Rechte Gewalt Format
+
+> Format for Incidents of Right-wing Violence
 
 In Germany, there are multiple organizations that collect data on right-wing violence.
 But there is no common format and it's mostly semi-structured text on a web page.
@@ -8,22 +10,24 @@ This format describes the data format / database schema for the scrapers.
 This initally format will get transformed / enriched / cleaned in our pipeline (more details in [aggregate](https://github.com/rechtegewalt/data.tatortrechts.de/tree/master/aggregate)).
 We will provide more information about final data at some point.
 
-## Simplifications
+## RGF Version 1
 
-For the first version of this formar, we made several simplifications.
-These should be addressed in future work.
+### Simplifications
+
+For the first version of this format, we made several simplifications.
+These should be addressed in further releases.
 
 - each incident can only have one location
 - each incident can only have one date
 - tags, factums, motives are only concatenated lists
 - each incident can have a date, but not a datetime (some chronicles provide the time in the body text (e.g. reach out))
+- the description is only text (without any highlighting or links)
 
-## Overview of the Database Schema
+We are currently still working on version 1 of this format and tweak it until it will work for all our uses cases.
 
-For now, make some assumptions. An incident can only have on location and date.
-This may change at a later point.
+### Overview of the Database Schema
 
-### Incident
+#### Incident
 
 ```
 {
@@ -34,15 +38,18 @@ This may change at a later point.
     description         : string,
     date                : UTC,
     county              : string,
+    state               : string,
     city                : string,
     motives             : [string],
     contexts            : [string],
     factums             : [string],
-    tags                : [string]
+    tags                : [string],
+    official            : boolean,
+    victims_ages        : [integer]
 }
 ```
 
-### Source
+#### Source
 
 Sources for an incident.
 
@@ -55,7 +62,7 @@ Sources for an incident.
 }
 ```
 
-### Chronicler
+#### Chronicler
 
 The entity (organization) that collected incidents.
 
@@ -67,13 +74,14 @@ The entity (organization) that collected incidents.
     chronicler_description  : string,
     chronicler_url          : string,
     chronicle_source        : string,
+    rgf_version             : integer
 }
 
 ```
 
-## Fields for Incident
+### Fields for Incident
 
-### rg_id (required)
+#### rg_id (required)
 
 A unique identifier for an incident (**r**echte **g**ewalt).
 If the organization provides URLs for each incident, use them.
@@ -82,57 +90,63 @@ For instance, 'chronicle_name' + calculate the MD5 hash by concatenating locatio
 
 **ex.** https://muenchen-chronik.de/8-september-2018-rassistische-beleidigung-und-angriff/
 
-### chronicler (required)
+#### chronicler (required)
 
 Which organisation collected the information?
 
 **ex.** Mobile Opferberatung
 
-### url (required)
+#### url (required)
 
 A URL to the web pager where the incident was reported. The URL may be unique but does not have to me. Some organizations do not provide individual URLs for each incident.
 
 **ex.** https://www.mobile-opferberatung.de/monitoring/chronik-2019/
 
-### title
+#### title
 
 A single sentence or very short text describing the incident.
 
 **ex.** "Hitlergruß vor der Feldherrenhalle"
 
-### description (required)
+#### description (required)
 
 A text describing the incident in details.
 
 **ex.** "Am Dienstag bemerken Streifenbeamt_innen der Polizei am Odeonsplatz einen Mann, der auf der obersten Stufe der Feldherrnhalle steht und den Hitlergruß zeigt. Für etwa zehn Sekunden streckt er seinen rechten Arm in die Höhe und sucht dabei gezielt Blickkontakt mit den Einsatzkräften. Diese nehmen den 54-jährigen Wohnsitzlosen daraufhin fest."
 
-### date (required)
+#### date (required)
 
 When the incident happend.
 
 **ex.** 2018-09-08T00:00:00+02:00
 
-### city
+#### city
 
 _Ort_
 
-### county
+#### county
 
 _Landkreis_
 
-### motives
+#### state
+
+_Bundesland_
+
+Only needed if `iso3166_2` is not specified in the table `chronicler`
+
+#### motives
 
 A list of keywords describing the motives behind the violence.
 
 **ex.** ["Antisemitismus"]
 
-### contexts
+#### contexts
 
 A list of keywords describing in what context the violence took place. It can be information about the place or the activity.
 
 **ex.** ["Arbeitsplatz"]
 
-### factums
+#### factums
 
 German: _Delikt_, _Handlung_
 
@@ -142,7 +156,7 @@ A list of keywords describing the violent actions commited.
 
 > For more examples of motives, contexts and factums, see https://muenchen-chronik.de/chronik/
 
-### tags
+#### tags
 
 A list of keywords that help categorizing the report but does not fall
 in the motives, contexts and factums groups.
@@ -151,36 +165,34 @@ in the motives, contexts and factums groups.
 
 Information about the original source of the incident report.
 
-### name
+#### name
 
 The name of the source
 
 **ex.** Mitteilung der Bundespolizeiinspektion München
 
-### date
+#### date
 
 When was the incident first reported by the source.
 
 **ex.** 2018-09-08T00:00:00+02:00
 
-### url
+#### url
 
 A link to the original source, e.g., news article.
 
 **ex.** https://www.sueddeutsche.de/
 
-## Fields for Aggregator
+### Fields for Aggregator
 
-### iso3166_1 (required)
+#### iso3166_1 (required)
 
 See https://en.wikipedia.org/wiki/ISO_3166-1
 
 **ex.** "DE"
 
-### iso3166_2
+#### iso3166_2
 
 See https://en.wikipedia.org/wiki/ISO_3166-2:DE
 
 **ex.** "DE-BE"
-
-TODO: describe the other fields
