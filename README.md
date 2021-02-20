@@ -1,20 +1,21 @@
 # `data.tatortrechts.de`
 
-Transform scattered, **semi-structed** reporting about **right-wing violence** in Germany into a single **database**.
+Transform scattered, **semi-structured** reporting about **right-wing violence** in Germany into a single **database**.
 
 The main goals of this project are:
 
-- develope a data from to structure the information from right-wing violence chronicles
+- develop a data format to structure the information from right-wing violence chronicles
 - scrape existing data sources (web pages) to make them available in a unified format
-- develope software tools to use and analyse the data
+- develop software tools to use and analyze the data
 
 ## Definition(s) for right-wing violence
 
-We take the official definition from the German administration as a basis:
+We follow the definition of the German NGO _VBRG_ that is based on the official definition of right-wing violence but extends it slightly.
+Here the official definition:
 
 > „Der wesentliche Kerngedanke einer „rechten“ Ideologie ist die Annahme einer Ungleichheit/Ungleichwertigkeit der Menschen.“ Als PMK- rechts zählt demnach, „wenn in Würdigung der Umstände der Tat und/oder der Einstellung des Täters Anhaltspunkte dafür vorliegen, dass sie sich gegen eine Person wegen ihrer/ihres zugeschriebenen oder tatsächlichen politischen Haltung, Einstellung und/oder Engagements, Nationalität, ethnischen Zugehörigkeit, Hautfarbe, Religionszugehörigkeit, Weltanschauung, sozialen Status physischen und/oder psychischen Behinderung oder Beeinträchtigung, sexuellen Orientierung und/oder sexuellen Identität oder äußeren Erscheinungsbildes, gerichtet sind und die Tathandlung damit im Kausalzusammenhang steht bzw. sich in diesem Zusammenhang gegen eine Institution/Sache oder ein Objekt richtet.“ (Bundesministerium des Inneren/ Bundesministerium der Justiz (Hrsg.): Definitionssystem Politisch motivierte Kriminalität. Berlin 2016.)
 
-The _VBRG_ is the umbrealla organisation for various local NGOs that monitor righ-wing violence and have a slightly [extended definition](https://verband-brg.de/ueber-uns/#monitoring). _VBRG_ stands for _Verband der Beratungsstellen für Betroffene rechter, rassistischer und antisemitischer Gewalt_ (Federal Association of Independent Counseling Centers for Victims of Right, Racist and Anti-Semitic Violence in Germany).
+The _VBRG_ is the umbrella organization for various local NGOs that monitor right-wing violence and [here their extended definition](https://verband-brg.de/ueber-uns/#monitoring). _VBRG_ stands for _Verband der Beratungsstellen für Betroffene rechter, rassistischer und antisemitischer Gewalt_ (Federal Association of Independent Counseling Centers for Victims of Right, Racist and Anti-Semitic Violence in Germany).
 
 ## Data Format for Violence Reporting
 
@@ -22,8 +23,9 @@ The _VBRG_ is the umbrealla organisation for various local NGOs that monitor rig
 
 ## Our Scrapers
 
-Scrapers are setup to run on the [Morph.io](https://morph.io/) automatically once a day.
-And the source code of the scrapers on [GitHub](https://github.com/rechtegewalt) and the data on [morph.io](https://morph.io/rechtegewalt).
+Scrapers are setup to run on the [morph.io](https://morph.io/) automatically once a day.
+And the source code of the [scrapers on GitHub](https://github.com/rechtegewalt) and the  [data on morph.io](https://morph.io/rechtegewalt).
+We collect some information about [the websites here](./Organisations.md).
 
 ## Related Work
 
