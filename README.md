@@ -40,6 +40,7 @@ We collect some information about [the websites here](./Organisations.md).
 - https://www.jmberlin.de/topographie-gewalt/#/vis
 - https://halle.nsu-watch.info/
 - https://github.com/ax3l/chronik-vorfaelle (scraper)
+- https://arne.schlueter.is/working-on/berliner-winter/
 
 ### US
 
